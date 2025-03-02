@@ -28,6 +28,8 @@ const taskSix = document.getElementById("task-6").innerText
        activity(taskOne,new Date().toLocaleTimeString())
        btnOne.disabled = true
        btnOne.style.background ="gray"
+       alert("Board updated Successfully")
+       allDone()
     })
 
     btnTwo.addEventListener("click",function(){
@@ -38,6 +40,8 @@ const taskSix = document.getElementById("task-6").innerText
       activity(taskTwo,new Date().toLocaleTimeString())
       btnTwo.disabled = true
       btnTwo.style.background ="gray"
+      alert("Board updated Successfully")
+      allDone()
    })
 
    btnThree.addEventListener("click",function(){
@@ -48,6 +52,8 @@ const taskSix = document.getElementById("task-6").innerText
       activity(taskThree,new Date().toLocaleTimeString())
       btnThree.disabled = true
       btnThree.style.background ="gray"
+      alert("Board updated Successfully")
+      allDone()
    })
 
    btnFour.addEventListener("click",function(){
@@ -58,6 +64,8 @@ const taskSix = document.getElementById("task-6").innerText
       activity(taskFour,new Date().toLocaleTimeString())
       btnFour.disabled = true
       btnFour.style.background ="gray"
+      alert("Board updated Successfully")
+      allDone()
    })
 
    btnFive.addEventListener("click",function(){
@@ -68,6 +76,8 @@ const taskSix = document.getElementById("task-6").innerText
       activity(taskFive,new Date().toLocaleTimeString())
       btnFive.disabled = true
       btnFive.style.background ="gray"
+      alert("Board updated Successfully")
+      allDone()
    })
 
    btnSix.addEventListener("click",function(){
@@ -78,6 +88,8 @@ const taskSix = document.getElementById("task-6").innerText
       activity(taskSix,new Date().toLocaleTimeString())
       btnSix.disabled = true
       btnSix.style.background ="gray"
+      alert("Board updated Successfully")
+      allDone()
    })
 
 
@@ -103,24 +115,25 @@ const clearHistory = document.getElementById("historyBtn")
     })
 
 
-    const now = new Date();
-    const formattedDate = now.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    const formattedDay = now.toLocaleString('en-US', {weekday: 'long'});
-
-    console.log(formattedDay);
-    const day = document.getElementById("day")
-    day.innerText=  formattedDay;
-    const date = document.getElementById("date")
-    date.innerText=  formattedDate;
+const now = new Date();
+const formattedDate = now.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const formattedDay = now.toLocaleString('en-US', {weekday: 'long'});
+const day = document.getElementById("day")
+day.innerText=  formattedDay;
+const date = document.getElementById("date")
+date.innerText=  formattedDate;
 
 
-    const deadline = document.querySelectorAll(".deadline")
-    for (let i = 0; i < deadline.length; i++) {
-      deadline[i].innerText=  formattedDate;
-    }
+const deadline = document.querySelectorAll(".deadline")
+for (let i = 0; i < deadline.length; i++) {
+deadline[i].innerText=  formattedDate;
+}
 
 
-new Date().toLocaleTimeString()
-
+function allDone(){
+   if(taskValue === 0)(
+      alert("congrats!!! You have successfully completed all the current task")
+   )
+}
 
 

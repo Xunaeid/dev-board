@@ -7,9 +7,10 @@
     <title>Dev Board</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
 </head>
-<body class="bg-blue-100 h-[200vh] p-10">
-        <header class="bg-white w-[90vw]  mx-auto max-w-292 px-3 rounded-xl">
+<body id="body" class="bg-gray-200 h-[200vh] p-10">
+        <header class="bg-white mx-auto px-3 rounded-xl flex h-[100px] w-[1536px]">
             <div class="navbar">
                 <div class="flex-1">
                   <a class="">
@@ -21,10 +22,10 @@
                   <div class="flex gap-2">
                     <div class="flex w-[75px] bg-slate-100 justify-between items-center px-3 py-2 rounded-[50px]">
                         <img class="size-5" src="assets/checkbox.png" alt="">
-                        <h3 class="text-[20px] font-bold">23</h3>
+                        <h3 id="score" class="text-[20px] font-bold">23</h3>
                       </div>
     
-                      <button class=" bg-slate-100 p-2 rounded-[50px]">
+                      <button id="theme" class=" bg-slate-100 p-2 rounded-[50px]">
                         <img class="size-7" src="assets/theme-btn.png" alt="">
                       </button>
                   </div>
@@ -32,133 +33,145 @@
               </div>
         </header>
 
-        <section>
-            <div class="bg-white  mx-auto max-w-292 px-5 rounded-xl mt-5 h-[918px] w-[1100px]">
-                <div class="py-5 flex justify-between border-dashed border-b-4 border-[#f2f5ff] ">
-                    <div class="flex gap-3 items-center bg-[#F4F7FF] w-[243px] h-[128px] rounded-md pl-10">
-                        <div class=" bg-white   p-3 rounded-[50px]"> <img class="size-5" src="assets/checkbox.png" alt=""></div>
-                        <div>
-                            <p>Task Assigned</p>
-                            <p class="font-bold text-xl">6</p>
+        <section class="w-[1536px] mx-auto">
+            <div class="flex gap-5" >
+                <div class="bg-white  mx-auto px-5 rounded-xl mt-5 h-[918px] w-[1146px]">
+                    <div class="py-5 flex justify-between border-dashed border-b-4 border-[#f2f5ff] ">
+                        <div class="flex gap-3 items-center bg-[#F4F7FF] w-[243px] h-[128px] rounded-md pl-5">
+                            <div class=" bg-white   p-3 rounded-[50px]"> <img class="size-5" src="assets/checkbox.png" alt=""></div>
+                            <div>
+                                <p>Task Assigned</p>
+                                <p id="task" class="font-bold text-xl">6</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="flex gap-3 items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[544px] h-[128px] rounded-md pl-10">
-                        <div class=" "> <img class="size -5" src="assets/board.png" alt=""></div>
-                        <div>
-                            <p class="text-white">Discover Something <br> New Today</p>
-                            
-                        </div>
-                    </div>
-
-                    <div class="flex gap-3 items-center bg-[#F4F7FF] w-[243px] h-[128px] rounded-md pl-10">
-                        <div class=" bg-white   p-3 rounded-[50px]"> <img class="size-5" src="assets/calender.png" alt=""></div>
-                        <div>
-                            <p class="day">Wed,</p>
-                            <p class=" date font-bold text-xl">6</p>
-                        </div>
-                    </div>
+                        <div class="flex gap-3 items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[544px] h-[128px] rounded-md pl-10">
+                            <div class=" "> <img class="size -5" src="assets/board.png" alt=""></div>
+                            <div>
+                                <p class="text-white">Discover Something <br> New Today</p>
                 
+                            </div>
+                        </div>
+                        <div class="flex gap-3 items-center bg-[#F4F7FF] w-[243px] h-[128px] rounded-md pl-5">
+                            <div class=" bg-white   p-3 rounded-[50px]"> <img class="size-5" src="assets/calender.png" alt=""></div>
+                            <div>
+                                <p id="day" >Wed,</p>
+                                <p id="date" class=" font-bold text-xl"></p>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <!-- cards -->
+                    <div class="pt-5 grid grid-cols-3 gap-8">
+                        <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
+                            <p class="bg-white py-1 inline-block px-3 rounded-xl">ShopEase</p>
+                            <h1 id="task-1" class="text-xl font-semibold py-5">Fix Mobile Button Issue</h1>
+                            <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
+                            <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
+                                <div>
+                                    <p>Deadline</p>
+                                    <p class="deadline font-semibold">21 March 2025</p>
+                                </div>
+                                <button id="btn-1" class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
+                            <p class="bg-white py-1 inline-block px-3 rounded-xl">CloudSync</p>
+                            <h1 id="task-2" class="text-xl font-semibold py-5">Add Dark Mode</h1>
+                            <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Store the user's preference in localStorage, update CSS varia..</p>
+                            <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
+                                <div>
+                                    <p>Deadline</p>
+                                    <p class="deadline font-semibold">21 March 2025</p>
+                                </div>
+                                <button id="btn-2"  class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
+                            <p class="bg-white py-1 inline-block px-3 rounded-xl">SwiftPay</p>
+                            <h1 id="task-3" class="text-xl font-semibold py-5">Optimize  Home page</h1>
+                            <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
+                            <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
+                                <div>
+                                    <p>Deadline</p>
+                                    <p class="deadline font-semibold">21 March 2025</p>
+                                </div>
+                                <button id="btn-3"  class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
+                            <p class="bg-white py-1 inline-block px-3 rounded-xl">Meta</p>
+                            <h1 id="task-4" class="text-xl font-semibold py-5">Add new emoji 🤲</h1>
+                            <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
+                            <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
+                                <div>
+                                    <p>Deadline</p>
+                                    <p class="deadline font-semibold">21 March 2025</p>
+                                </div>
+                                <button id="btn-4"  class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
+                            <p class="bg-white py-1 inline-block px-3 rounded-xl">Google LLC</p>
+                            <h1 id="task-5" class="text-xl font-semibold py-5">Integrate OpenAI API </h1>
+                            <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
+                            <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
+                                <div>
+                                    <p>Deadline</p>
+                                    <p class="deadline font-semibold">21 March 2025</p>
+                                </div>
+                                <button id="btn-5"  class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                        <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
+                            <p class="bg-white py-1 inline-block px-3 rounded-xl">Glassdoar</p>
+                            <h1 id="task-6" class="text-xl font-semibold py-5">Improve Job searching </h1>
+                            <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
+                            <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
+                                <div>
+                                    <p>Deadline</p>
+                                    <p class="deadline font-semibold">21 March 2025</p>
+                                </div>
+                                <button id="btn-6"  class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                                    Completed
+                                </button>
+                            </div>
+                        </div>
+                
+                    </div>
                 </div>
 
-                <!-- cards -->
-                <div class="pt-5 grid grid-cols-3 gap-5">
-                    <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
-                        <p class="bg-white py-1 inline-block px-3 rounded-xl">ShopEase</p>
-                        <h1 class="text-xl font-semibold py-5">Fix Mobile Button Issue</h1>
-                        <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
-                        <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
-                            <div>
-                                <p>Deadline</p>
-                                <p class="deadline font-semibold">21 March 2025</p>
-                            </div>
-                            <button class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
-                                Completed 
-                            </button>
+                <div class="w-[366px] h-[918px] bg-white p-5 rounded-xl mt-5">
+                   <div class="flex flex-col items-center">
+                        <div class="flex gap-3">
+                            <img src="assets/activity.png" alt="">
+                            <p>Activity Log</p>
                         </div>
+                        <button id="historyBtn" class="mt-5 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                            Clear History
+                        </button>
+                   </div>
+
+                    <div id="history" class=" border-dashed border-t-2 mt-5 border-[#d9dff5]">
+                        <!-- <div class="w-[318px] rounded-md bg-[#F4F7FF] p-3 mt-5 ">
+                            <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                        </div> -->
                     </div>
-
-                    <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
-                        <p class="bg-white py-1 inline-block px-3 rounded-xl">CloudSync</p>
-                        <h1 class="text-xl font-semibold py-5">Add Dark Mode</h1>
-                        <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Store the user's preference in localStorage, update CSS varia..</p>
-                        <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
-                            <div>
-                                <p>Deadline</p>
-                                <p class="deadline font-semibold">21 March 2025</p>
-                            </div>
-                            <button class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
-                                Completed 
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
-                        <p class="bg-white py-1 inline-block px-3 rounded-xl">SwiftPay</p>
-                        <h1 class="text-xl font-semibold py-5">Optimize  Home page</h1>
-                        <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
-                        <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
-                            <div>
-                                <p>Deadline</p>
-                                <p class="deadline font-semibold">21 March 2025</p>
-                            </div>
-                            <button class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
-                                Completed 
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
-                        <p class="bg-white py-1 inline-block px-3 rounded-xl">Meta</p>
-                        <h1 class="text-xl font-semibold py-5">Add new emoji 🤲</h1>
-                        <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
-                        <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
-                            <div>
-                                <p>Deadline</p>
-                                <p class="deadline font-semibold">21 March 2025</p>
-                            </div>
-                            <button class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
-                                Completed 
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
-                        <p class="bg-white py-1 inline-block px-3 rounded-xl">Google LLC</p>
-                        <h1 class="text-xl font-semibold py-5">Integrate OpenAI API </h1>
-                        <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
-                        <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
-                            <div>
-                                <p>Deadline</p>
-                                <p class="deadline font-semibold">21 March 2025</p>
-                            </div>
-                            <button class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
-                                Completed 
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class=" w-[342px] h-[317px] bg-[#F4F7FF] p-5 rounded-xl">
-                        <p class="bg-white py-1 inline-block px-3 rounded-xl">Glassdoar</p>
-                        <h1 class="text-xl font-semibold py-5">Improve Job searching </h1>
-                        <p class="bg-white w-[294px] h-[92px] mb-5 p-4 tex t-[16px] rounded-md text-gray-400">Debug using Chrome DevTools, check for overlappin..</p>
-                        <div class="flex justify-between pt-3 border-dashed border-t-2 border-[#d9dff5]">
-                            <div>
-                                <p>Deadline</p>
-                                <p class="deadline font-semibold">21 March 2025</p>
-                            </div>
-                            <button class="m-2 bg-[#3752FD] py-2 text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
-                                Completed 
-                            </button>
-                        </div>
-                    </div>
-
-
-                    
                 </div>
-
-
             </div>
         </section>
-</body>
+
+        <script src="script/theme.js"></script>
+        <script src="script/main.js"></script>
+
+    </body>
 </html>

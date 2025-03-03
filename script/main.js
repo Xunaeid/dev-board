@@ -111,7 +111,7 @@ function allDone(){
 const discover = document.getElementById("discover")
 
 discover.addEventListener("click", function(){
-    location.href = "../blog.html";
+    location.href = "blog.html";
 
 })
 

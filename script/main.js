@@ -21,7 +21,7 @@ const taskSix = document.getElementById("task-6").innerText
 
 function disabledBtn(btn){
    btn.disabled = true
-   btn.style.background ="gray"
+   btn.style.background ="#c1c1c1"
 }
 
 function taskComplete(){
@@ -111,7 +111,7 @@ function allDone(){
 const discover = document.getElementById("discover")
 
 discover.addEventListener("click", function(){
-    location.href = "/blog.html";
+    location.href = "../blog.html";
 
 })
 

@@ -1,13 +1,11 @@
 const theme = document.getElementById("theme")
 const body = document.getElementById("body")
-// body.style.backgroundColor()
 
  theme.addEventListener("click", function(){
-    let color = ["#B4EBE6","blue", "Teal", "#80CBC4" , "#C599B6" ,"#2DAA9E"]
+    let color = [ "#00ffc8", "#0095ff" ," #C599B6" ,"#2DAA9E ", "#0000ff" , "#ff00a6", "#9000ff", "#5eff00", "#1f1f1f", "#b4b4b4"]
     let random =Math.floor(Math.random()*color.length)
     body.style.background = color[random]
 })
 
-let random =Math.floor(Math.random()*color.length)
-console.log(color[random])
+
 

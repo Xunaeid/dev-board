@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+    .font-poppins {
+         font-family: "Poppins", sans-serif;
+        } 
+    </style>
+</head>
+<body class="bg-[#e7effb] w-[100vw] p-10 font-poppins">
+    <header class="bg-white mx-auto px-3 rounded-xl flex h-[100px] w-[1536px]">
+        <div class="navbar">
+            <div class="flex-1">
+              <a class="">
+                <img src="assets/logo.png" class="w-4 lg:w-8" alt="logo">
+              </a>
+              <h1 class="text-2xl ml-2"><span>Dev</span><span class="font-bold">Board</span></h1>
+            </div>
+            <div class="flex-none">
+              <div class="flex gap-2">
+                <button id="back" class="m-2 bg-[#3752FD] py-2 font-bold text-white px-6 rounded-xl hover:bg-gray-700 duration-300 ">
+                    Back to Desk
+                </button>
+              </div>
+            </div>
+          </div>
+    </header>
+
+    <section class="flex flex-col items-center gap-10 pt-16 w-[1536px] mx-auto">
+        <h1 class="text-6xl font-bold pb-12">Blogs</h1>
+
+        <!-- demo -->
+
+        <div class=" bg-white rounded-md">
+            <h2 class=" py-6 px-10 text-2xl font-bold border-dashed border-b-4 border-[#e7effb]">Question-1: What are the different ways to select an element in the DOM?</h2>
+            <p class="text-xl px-10 py-6 leading-10">You can select elements in the DOM using methods like <b>getElementById("id")</b> for a single element and <b>getElementsByClassName("class")</b> or <b>getElementsByTagName("tag")</b> for multiple elements. More flexible options include <b>querySelector("css-selector")</b> for the first match and <b>querySelectorAll("css-selector") </b> for all matches.</p>
+        </div>
+
+        <div class=" bg-white rounded-md">
+            <h2 class=" py-6 px-10 text-2xl font-bold border-dashed border-b-4 border-[#e7effb]">Question-2: What is the difference between innerHTML, innerText, and textContent?</h2>
+            <p class="text-xl px-10 py-6 leading-10"><b>innerHTML</b> gets or sets the HTML content inside an element, including tags, while <b>innerText</b> gets only the visible text, ignoring hidden elements . <b>textContent</b> gets all text inside an element, including hidden elements, but treats everything as plain text without formatting.</p>
+        </div>
+
+        <div class=" bg-white rounded-md">
+            <h2 class=" py-6 px-10 text-2xl font-bold border-dashed border-b-4 border-[#e7effb]">Question-3: What is event delegation in the DOM?</h2>
+            <p class="text-xl px-10 py-6 leading-10">Event delegation means adding one event listener to a parent instead of many to each child. When a child is clicked, the event "bubbles up" to the parent, which handles it. This makes the webpage faster and works even if new child elements are added later.</p>
+        </div>
+
+        <div class=" bg-white rounded-md">
+            <h2 class=" py-6 px-10 text-2xl font-bold border-dashed border-b-4 border-[#e7effb]">Question-4: What is event bubbling in the DOM?</h2>
+            <p class="text-xl px-10 py-6 leading-10">Event bubbling is when an event starts from the clicked (or interacted) element and moves up to its parent, grandparent, and so on. For example, if you click a button inside a <b>&lt;div&gt;</b> , the event first happens on the button, then "bubbles up" to the <b>&lt;div&gt;</b>, and then to the <b>&lt;body&gt;</b>. This allows parent elements to handle events from their children using event delegation.</p>
+        </div>
+
+        <div class=" bg-white rounded-md">
+            <h2 class=" py-6 px-10 text-2xl font-bold border-dashed border-b-4 border-[#e7effb]">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            <p class="text-xl px-10 py-6 leading-10">To create an element, use <b>document.createElement("tag")</b>, like <b>document.createElement("div")</b>. To add it, use <b>parent.appendChild(element)</b>, which places it inside another element. To remove it, use <b>element.remove()</b> or <b>parent.removeChild(element)</b>.</p>
+        </div>
+
+
+    </section>
+    <script src="script/blog.js"></script>
+</body>
+</html>

@@ -34,95 +34,41 @@ function pointAdd(){
    score.innerText = scoreValue
 }
 
-const history = document.getElementById("history")
+function btnEvents(task,btn){
+   taskComplete()
+   pointAdd()
+   activity(task,new Date().toLocaleTimeString())
+   disabledBtn(btn)
+   alert("Board updated Successfully")
+   allDone()
+}
 
-    function activity(task,time){
-     const div= document.createElement("div")
-     div.innerHTML=`
-     <div class="w-[318px] rounded-md bg-[#F4F7FF] p-3 mt-5 ">
-     <p>You have Complete The Task ${task} at ${time}</p>
-    </div>`
-    history.appendChild(div)
-    }
 
-    
+
+
     btnOne.addEventListener("click",function(){
-       taskComplete()
-       pointAdd()
-       activity(taskOne,new Date().toLocaleTimeString())
-       disabledBtn(btnOne)
-       alert("Board updated Successfully")
-       allDone()
+      btnEvents(taskOne,btnOne)
     })
 
     btnTwo.addEventListener("click",function(){
-      taskValue --
-      task.innerText = taskValue
-      scoreValue ++
-      score.innerText = scoreValue
-      activity(taskTwo,new Date().toLocaleTimeString())
-      disabledBtn(btnTwo)
-      alert("Board updated Successfully")
-      allDone()
+      btnEvents(taskTwo,btnTwo)
    })
 
    btnThree.addEventListener("click",function(){
-      taskValue --
-      task.innerText = taskValue
-      scoreValue ++
-      score.innerText = scoreValue
-      activity(taskThree,new Date().toLocaleTimeString())
-      disabledBtn(btnThree)
-      alert("Board updated Successfully")
-      allDone()
+      btnEvents(taskThree,btnThree)
    })
 
    btnFour.addEventListener("click",function(){
-      taskValue --
-      task.innerText = taskValue
-      scoreValue ++
-      score.innerText = scoreValue
-      activity(taskFour,new Date().toLocaleTimeString())
-      disabledBtn(btnFour)
-      alert("Board updated Successfully")
-      allDone()
+      btnEvents(taskFour,btnFour)
    })
 
    btnFive.addEventListener("click",function(){
-      taskValue --
-      task.innerText = taskValue
-      scoreValue ++
-      score.innerText = scoreValue
-      activity(taskFive,new Date().toLocaleTimeString())
-      disabledBtn(btnFive)
-      alert("Board updated Successfully")
-      allDone()
+      btnEvents(taskFive,btnFive)
    })
 
    btnSix.addEventListener("click",function(){
-      taskValue --
-      task.innerText = taskValue
-      scoreValue ++
-      score.innerText = scoreValue
-      activity(taskSix,new Date().toLocaleTimeString())
-      disabledBtn(btnSix)
-      alert("Board updated Successfully")
-      allDone()
+      btnEvents(taskSix,btnSix)
    })
-
-
-
-
-const history = document.getElementById("history")
-
-    function activity(task,time){
-     const div= document.createElement("div")
-     div.innerHTML=`
-     <div class="w-[318px] rounded-md bg-[#F4F7FF] p-3 mt-5 ">
-     <p>You have Complete The Task ${task} at ${time}</p>
-    </div>`
-    history.appendChild(div)
-    }
 
 const clearHistory = document.getElementById("historyBtn")
     clearHistory.addEventListener("click", function(){
@@ -131,14 +77,24 @@ const clearHistory = document.getElementById("historyBtn")
 
 
 const now = new Date();
-const formattedDate = now.toLocaleString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-const formattedDay = now.toLocaleString('en-US', {weekday: 'long'});
+const formattedDate = now.toLocaleString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+const formattedDay = now.toLocaleString('en-GB', {weekday: 'long'});
 const day = document.getElementById("day")
 day.innerText=  formattedDay;
 const date = document.getElementById("date")
 date.innerText=  formattedDate;
 
-
+// activity log
+const history = document.getElementById("history")
+    function activity(task,time){
+     const div= document.createElement("div")
+     div.innerHTML=`
+     <div class="w-[318px] rounded-md bg-[#F4F7FF] p-3 mt-5 ">
+     <p>You have Completed The Task ${task} at ${time}</p>
+    </div>`
+    history.appendChild(div)
+    }
+// deadline
 const deadline = document.querySelectorAll(".deadline")
 for (let i = 0; i < deadline.length; i++) {
 deadline[i].innerText=  formattedDate;
@@ -146,9 +102,17 @@ deadline[i].innerText=  formattedDate;
 
 
 function allDone(){
-   if(taskValue === 0)(
-      alert("congrats!!! You have successfully completed all the current task")
+   if(taskValue === 0)( 
+      alert("congrats !!! 🙂 You have successfully completed all the current task")
    )
 }
+
+// discover
+const discover = document.getElementById("discover")
+
+discover.addEventListener("click", function(){
+    location.href = "/blog.html";
+
+})
 
 

@@ -8,13 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-        .bb{
-            color: #00ffc8, #0095ff , #C599B6 ,#2DAA9E , #0000ff , #ff00a6, #9000ff, #5eff00, #1f1f1f, #b4b4b4;
-        }
+        .font-poppins {
+    font-family: "Poppins", sans-serif;
+}
     </style>
 </head>
-<body id="body" class="bg-gray-200 h-[200vh] p-10">
+<body id="body" class="bg-gray-200 w-[100vw] p-10 font-poppins">
         <header class="bg-white mx-auto px-3 rounded-xl flex h-[100px] w-[1536px]">
             <div class="navbar">
                 <div class="flex-1">
@@ -40,7 +43,7 @@
 
         <section class="w-[1536px] mx-auto">
             <div class="flex gap-5" >
-                <div class="bg-white  mx-auto px-5 rounded-xl mt-5 h-[918px] w-[1146px]">
+                <div class="bg-white  mx-auto px-5 rounded-xl pb-5 mt-5 w-[1146px]">
                     <div class="py-5 flex justify-between border-dashed border-b-4 border-[#f2f5ff] ">
                         <div class="flex gap-3 items-center bg-[#F4F7FF] w-[243px] h-[128px] rounded-md pl-5">
                             <div class=" bg-white   p-3 rounded-[50px]"> <img class="size-5" src="assets/checkbox.png" alt=""></div>
@@ -49,9 +52,9 @@
                                 <p id="task" class="font-bold text-xl">6</p>
                             </div>
                         </div>
-                        <div class="flex gap-3 items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[544px] h-[128px] rounded-md pl-10">
+                        <div id="discover" class="flex gap-3 items-center cursor-pointer bg-gradient-to-r  from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[544px] h-[128px] rounded-md pl-10">
                             <div class=" "> <img class="size -5" src="assets/board.png" alt=""></div>
-                            <div>
+                            <div  >
                                 <p class="text-white">Discover Something <br> New Today</p>
                 
                             </div>
@@ -151,11 +154,12 @@
                                 </button>
                             </div>
                         </div>
+                        
                 
                     </div>
                 </div>
-
-                <div class="w-[366px] h-[918px] bg-white p-5 rounded-xl mt-5">
+                <!-- Activity log -->
+                <div class="w-[366px] min-h-[100%] bg-white p-5 rounded-xl mt-5">
                    <div class="flex flex-col items-center">
                         <div class="flex gap-3">
                             <img src="assets/activity.png" alt="">
@@ -167,9 +171,7 @@
                    </div>
 
                     <div id="history" class=" border-dashed border-t-2 mt-5 border-[#d9dff5]">
-                        <!-- <div class="w-[318px] rounded-md bg-[#F4F7FF] p-3 mt-5 ">
-                            <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                        </div> -->
+                        
                     </div>
                 </div>
             </div>
